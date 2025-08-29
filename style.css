@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.1s ease-in-out;
+    caret-color: transparent;
 }
 body {
     margin: 0;
@@ -203,6 +204,8 @@ a:hover {
     transition: all 0.3s ease;
     outline: none;
     backdrop-filter: blur(5px);
+    caret-color: auto;
+    cursor: pointer;
 }
 
 .search-ipt:hover {
@@ -301,4 +304,8 @@ a:hover {
 .mode-toggle-btn:hover {
     background-color: rgba(255, 255, 255, 0.18);
     transform: translateY(-2px);
+}
+
+#copy-email {
+    cursor: pointer;
 }
