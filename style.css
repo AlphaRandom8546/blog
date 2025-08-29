@@ -1,0 +1,304 @@
+* {
+    font-family: Ubuntu Mono;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s ease-in-out;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: -1;
+}
+
+
+h1, p, a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+            
+.footer a, .intro-a {
+    color: #b4c7d9;
+}         
+a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, .9);
+}
+
+/* 导航栏样式 */
+.navigation {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    background-color: rgba(33, 33, 33, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+.nav-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+.nav-logo-a, .nav-contact-a {
+    display: flex;
+    align-items: center;
+}
+
+.authorMF, .contactBtn {
+    opacity: .9;
+}
+
+/* 页面容器 */
+.page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 搜索区域样式 */
+.searchs {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.search-f {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.introd {
+    background-color: rgba(33, 33, 33, .75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
+    width: 85%;
+    max-width: 500px;
+    padding: 25px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+.introd-h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.introd-p {
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.news {
+    background-color: rgba(33, 33, 33, .75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
+    width: 85%;
+    max-width: 500px;
+    padding: 25px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+.news-h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.news-p {
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.footer {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.made-by {
+    color: rgba(255, 255, 255, 0.753);
+}
+.made-by p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.footer-links {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.753);
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-ipt {
+    flex: 1;
+    height: 45px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    backdrop-filter: blur(5px);
+}
+
+.search-ipt:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.search-ipt:focus {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.search-ipt::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn, .latest-btn, .popular-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.search-btn {
+    width: 45px;
+    padding: 0;
+}
+
+.latest-btn, .popular-btn {
+    flex: 1;
+}
+
+.search-btn:hover, .latest-btn:hover, .popular-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.introd, .footer {
+    overflow: auto;
+}
+
+.pHr {
+    color: rgba(255, 255, 255, .75);
+}
+
+.heimu, .heimu a, a .heimu, .heimu a.new {
+    background-color: #00aeff;
+    color: #00aeff;
+    text-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+.heimu:hover, .heimu:active,
+.heimu:hover .heimu, .heimu:active .heimu {
+    color: white !important;
+}
+.heimu:hover a, a:hover .heimu,
+.heimu:active a, a:active .heimu {
+    color: rgb(0, 0, 0) !important;
+}
+.heimu:hover .new, .heimu .new:hover, .new:hover .heimu,
+.heimu:active .new, .heimu .new:active, .new:active .heimu {
+    color: #BA0000 !important;
+}
+
+.mode-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    /* width: 100px; */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.mode-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
